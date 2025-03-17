@@ -69,7 +69,7 @@ export default function ResetPasswordConfirmationPage() {
           <CardHeader>
             <CardTitle>Confirm your email</CardTitle>
             <CardDescription>
-              We'll send you a link to reset your password
+              We&apos;ll send you a link to reset your password
             </CardDescription>
           </CardHeader>
           <CardContent>

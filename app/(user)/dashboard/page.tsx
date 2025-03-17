@@ -112,7 +112,8 @@ export default function DashboardPage() {
         console.log(notifications);
         setRecentNotifications(notifications);
       }catch(error){
-        console.error("Failed to fetch notifications");
+        
+        console.error(error);
       }
     }
 
@@ -285,18 +286,18 @@ export default function DashboardPage() {
                     <p>Based on the graph above, we can observe the following trends:</p>
                     <ul className="list-disc pl-5 mt-2 space-y-2">
                       <li>
-                        "The Great Gatsby" has consistently been the most borrowed book over the past three months,
+                      &quot;The Great Gatsby&quot; has consistently been the most borrowed book over the past three months,
                         showing a slight increase in popularity.
                       </li>
                       <li>
-                        "To Kill a Mockingbird" saw a significant spike in borrowing during July, possibly due to summer
+                      &quot;To Kill a Mockingbird&quot; saw a significant spike in borrowing during July, possibly due to summer
                         reading programs.
                       </li>
                       <li>
-                        "1984" has maintained a steady borrowing rate, indicating its enduring popularity among readers.
+                      &quot;1984&quot; has maintained a steady borrowing rate, indicating its enduring popularity among readers.
                       </li>
                       <li>
-                        "Pride and Prejudice" shows some fluctuation in borrowing rates, with a noticeable dip in July
+                      &quot;Pride and Prejudice&quot; shows some fluctuation in borrowing rates, with a noticeable dip in July
                         followed by a recovery in August.
                       </li>
                     </ul>
@@ -319,7 +320,7 @@ export default function DashboardPage() {
                 <ul className="space-y-4">
                   <li className="flex items-center space-x-2">
                     <Input type="checkbox" id="task1" className="w-4 h-4" />
-                    <Label htmlFor="task1">Return "The Catcher in the Rye" by next week</Label>
+                    <Label htmlFor="task1">Return &quot;The Catcher in the Rye&quot; by next week</Label>
                   </li>
                   <li className="flex items-center space-x-2">
                     <Input type="checkbox" id="task2" className="w-4 h-4" />
@@ -327,7 +328,7 @@ export default function DashboardPage() {
                   </li>
                   <li className="flex items-center space-x-2">
                     <Input type="checkbox" id="task3" className="w-4 h-4" />
-                    <Label htmlFor="task3">Write review for "The Alchemist"</Label>
+                    <Label htmlFor="task3">Write review for &quot;The Alchemist&quot;</Label>
                   </li>
                 </ul>
               </CardContent>
@@ -344,15 +345,15 @@ export default function DashboardPage() {
             <ul className="space-y-4">
               <li className="flex items-center space-x-2">
                 <Clock className="h-5 w-5 text-primary" />
-                <span>You borrowed "The Great Gatsby" yesterday</span>
+                <span>You borrowed &quot;The Great Gatsby&quot; yesterday</span>
               </li>
               <li className="flex items-center space-x-2">
                 <FileSpreadsheet className="h-5 w-5" />
-                <span>Your book review for "To Kill a Mockingbird" was approved</span>
+                <span>Your book review for &quot;To Kill a Mockingbird&quot; was approved</span>
               </li>
               <li className="flex items-center space-x-2">
                 <Users className="h-5 w-5 " />
-                <span>Your Request for "Ninja Hattori" is approved</span>
+                <span>Your Request for &quot;Ninja Hattori&quot; is approved</span>
               </li>
             </ul>
           </CardContent>

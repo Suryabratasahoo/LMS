@@ -142,7 +142,7 @@ export default function BookDetails() {
           <AlertCircle className="h-24 w-24 text-yellow-500" />
           <h2 className="text-2xl font-bold">Book Not Found</h2>
           <p className="text-lg text-muted-foreground max-w-md">
-            We're sorry, but the book you're looking for is not currently in our library.
+            We&apos;re sorry, but the book you&apos;re looking for is not currently in our library.
           </p>
           <Button onClick={handleBack} variant="outline">
             Go Back
@@ -466,8 +466,6 @@ export default function BookDetails() {
           </main>
         </>
       )}
-
-
     </div>
   )
 }

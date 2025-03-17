@@ -233,7 +233,7 @@ export function AuthForm({ type }: AuthFormProps) {
           {type === 'signin' && (
             <motion.div variants={itemVariants} className="w-full text-center">
               <span className="text-sm text-gray-600">
-                Don't have an account?{' '}
+                Don&apos;t have an account?{' '}
                 <Link href="/signup" className="font-medium text-primary hover:text-primary/80 transition-colors duration-200">
                   Create an account
                 </Link>
