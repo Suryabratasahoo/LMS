@@ -27,7 +27,26 @@ interface Review {
   createdAt: string
 }
 
-
+interface Book {
+  _id: string
+  title: string
+  author: string
+  image: string
+  description: string
+  publisher: string
+  language: string
+  paperback: number
+  isbn: string
+  dimension: {
+    length: number
+    width: number
+    height: number
+  }
+  totalCopies: number
+  availableCopies: number
+  price: number
+  ratings: number
+}
 export default function BookDetails() {
   const router = useRouter()
   const { id } = useParams()
