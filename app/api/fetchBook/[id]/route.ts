@@ -5,7 +5,7 @@ import Book from "@/models/Book";
 export async function GET(req: NextRequest, { params }: { params: { id: string } }) {
   try {
     await connectDB();
-    const { id } = params; 
+    const { id } = params;
 
     if (!id) {
       return NextResponse.json({ error: "ID is required" }, { status: 400 });
