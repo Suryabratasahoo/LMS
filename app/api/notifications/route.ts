@@ -14,6 +14,7 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
         const notifications=await Notification.find({user:userId}).limit(5).sort({createdAt:-1})
         return NextResponse.json(notifications,{status:200});
     }catch(error){
+        console.log(error);
         return NextResponse.json({error:"Internal Server Error"},{status:500});
     }
 }
@@ -29,6 +30,7 @@ export async function PATCH(req: NextRequest): Promise<NextResponse> {
         await Notification.findByIdAndUpdate(id,{isRead:true},{new:true});
         return NextResponse.json({status:200});
     }catch(error){
+        console.log(error);
         return NextResponse.json({error:"Internal Server Error"},{status:500});
     }
 }
@@ -45,6 +47,7 @@ export async function DELETE(req:NextRequest):Promise<NextResponse>{
         await Notification.findByIdAndDelete(id);
         return NextResponse.json({status:200});
     }catch(error){
+        console.log(error);
         return NextResponse.json({error:"Internal Server Error"},{status:500});
     }
 }

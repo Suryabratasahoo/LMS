@@ -1,4 +1,4 @@
-import Image from "next/image";
+
 import CTA from "../components/LandingPage/CTA";
 import Features from "../components/LandingPage/Features";
 import Footer from "../components/LandingPage/Footer";

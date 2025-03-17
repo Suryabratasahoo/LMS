@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
-import { DollarSign, Clock, Shield, Users,BookOpen,Search,RefreshCcw } from 'lucide-react'
+import { Users,BookOpen,Search,RefreshCcw } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Playfair_Display, Lato } from 'next/font/google';
 

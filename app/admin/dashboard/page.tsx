@@ -11,25 +11,11 @@ import { AnnouncementDialog } from "./announcement-dialog"
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table"
 import { toast } from "react-hot-toast"
 // Mock data for borrow requests
-const borrowRequests = [
-  { id: 1, user: "John Doe", book: "To Kill a Mockingbird", date: "2023-06-15" },
-  { id: 2, user: "Jane Smith", book: "1984", date: "2023-06-16" },
-  { id: 3, user: "Bob Johnson", book: "Pride and Prejudice", date: "2023-06-17" },
-]
+
 
 
 
 // Mock data for new book requests
-const newBookRequests = [
-  {
-    id: 1,
-    title: "The Catcher in the Rye",
-    author: "J.D. Salinger",
-    requestedBy: "Alice Williams",
-    date: "2023-06-14",
-  },
-  { id: 2, title: "Brave New World", author: "Aldous Huxley", requestedBy: "Charlie Brown", date: "2023-06-15" },
-]
 
 // Mock data for borrowing analytics
 const borrowingData = [
@@ -92,6 +78,7 @@ export default function AdminDashboard() {
       setBorrowRequests(borrowRequests.filter((request) => request._id !== id));
       toast.success(data.message);
     } catch (error) {
+      console.error(error);
       toast.error(error);
     }
   }

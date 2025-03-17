@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { format, isPast, addDays } from "date-fns"
-import { ArrowLeftCircle, Calendar, Loader2 ,BookOpen} from "lucide-react"
+import { ArrowLeftCircle, Calendar,BookOpen} from "lucide-react"
 import { Card, CardContent, CardFooter } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -117,6 +117,7 @@ export default function ReturnBookPage() {
         }
         toast.success("Request for returning book has been sent successfully");
       }catch(error){
+        console.error(error);
         toast.error("Error while sending request for returning book");
       }
     }

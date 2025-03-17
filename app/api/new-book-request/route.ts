@@ -2,7 +2,7 @@ import connectDB from "@/lib/connectDb";
 import { NextRequest, NextResponse } from "next/server";
 import Request from "@/models/Request";
 import Notification from "@/models/Notification";
-export async function GET(req: NextRequest): Promise<NextResponse> {
+export async function GET(): Promise<NextResponse> {
   try {
     console.log("Hello I am here");
     await connectDB();

@@ -69,6 +69,7 @@ export function UpdateDialogue({
       toast.success("Review updated successfully")
       onOpenChange(false)
     } catch (error) {
+      console.error(error)
       toast.error("Failed to update review")
     } finally {
       setIsSubmitting(false)

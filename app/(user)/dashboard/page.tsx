@@ -98,6 +98,7 @@ export default function DashboardPage() {
           toast.error("Failed to fetch user details")
         }
       } catch (error) {
+        console.error(error)
         toast.error("Error fetching user details")
       }
     }

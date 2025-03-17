@@ -14,32 +14,6 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/comp
 import { toast } from "react-hot-toast"
 
 // Mock data for books (you should replace this with actual data fetching)
-const mockBooks = [
-    {
-        id: 1,
-        title: "To Kill a Mockingbird",
-        author: "Harper Lee",
-        genre: "Fiction",
-        image: "/mockingbird.jpg",
-        description:
-            "To Kill a Mockingbird is a 1960 novel by Harper Lee that became an instant classic, earning widespread acclaim and winning the Pulitzer Prize in 1961. The novel is regarded as one of the most significant works of modern American literature, praised for its powerful themes of racial injustice, moral growth, and empathy.",
-        rating: 4.5,
-        reviews: 222,
-        details: {
-            publisher: "Scribner",
-            language: "English",
-            paperback: "180 pages",
-            isbn: "978-0743273565",
-            dimensions: "5.31 x 0.5 x 8.25 inches",
-        },
-        availability: {
-            status: "Available",
-            copies: 3,
-            estimatedReturnDate: "2023-07-15",
-        },
-    },
-    // ... (other book data remains unchanged)
-]
 
 export default function BookDetails() {
     const router = useRouter()
@@ -48,7 +22,7 @@ export default function BookDetails() {
     const [isWishlisted, setIsWishlisted] = useState(false)
     const [selectedFormat, setSelectedFormat] = useState("physical");
     const [loading, setLoading] = useState(true);
-    const [userId,setUserId]=useState("");
+    // const [userId,setUserId]=useState("");
     const [text,setText]=useState("");
     const [isRequested,setIsRequested]=useState(false);
     const [user,setUser]=useState<any>({});
@@ -75,7 +49,7 @@ export default function BookDetails() {
                 else{
                     setIsRequested(false);
                 }
-                setUserId(user._id);
+                // setUserId(user._id);
             }catch(error){
                 console.error("Error:",error)
             }

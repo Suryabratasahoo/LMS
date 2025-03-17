@@ -1,4 +1,4 @@
-import ReturnBookPage from "@/app/(user)/dashboard/return-book/page";
+
 import connectDB from "@/lib/connectDb";
 import BookRequest from "@/models/BookRequest";
 import Book from "@/models/Book";
@@ -40,7 +40,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
 
 
     }catch(error){
-        return NextResponse.json({error:"Internal Server Error"},{status:500});
+        return NextResponse.json({error:error},{status:500});
     }
 }
 

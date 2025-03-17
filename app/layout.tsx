@@ -1,41 +1,17 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { Poppins } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { Space_Grotesk } from "next/font/google";
-import { Playfair_Display, Lato } from "next/font/google";
 
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal", "italic"],
-});
 
-const lato = Lato({
-  subsets: ["latin"],
-  weight: ["400", "700"],
-  style: ["normal"],
-});
 
-const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["400", "600", "700"],
-});
+
 const font=Space_Grotesk({
   subsets: ["latin"],
   weight: ["400", "600", "700"],
 })
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   title: "Create Next App",

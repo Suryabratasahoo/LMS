@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react"
 import { format } from "date-fns"
-import { ChevronRight, Search,Loader2,BookOpen } from "lucide-react"
+import { ChevronRight, Search,BookOpen } from "lucide-react"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -55,6 +55,7 @@ export default function LibraryNoticesPage() {
           setLoading(false);
           console.log(data);
         }catch(error){
+          console.log(error);
           toast.error("Failed to fetch notices");
         }
       }

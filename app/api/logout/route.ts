@@ -1,7 +1,7 @@
 
 import { NextResponse } from "next/server";
 
-export async function POST(req: Request) {
+export async function POST() {
   // Create a response with a success message
   const response = NextResponse.json(
     { message: "You have been signed out" },

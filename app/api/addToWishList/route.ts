@@ -1,7 +1,6 @@
 import connectDB from "@/lib/connectDb";
-import { connect } from "http2";
 import { NextResponse,NextRequest } from "next/server";
-const User=require('@/models/User');
+import User from "@/models/User";
 
 interface RequestBody {
     userId: string;
@@ -28,6 +27,6 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         return NextResponse.json({ user, message: "Book added to wishlist" }, { status: 200 });
 
     } catch (error) {
-        return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
+        return NextResponse.json({ error: error }, { status: 500 });
     }
 }

@@ -9,6 +9,6 @@ export async function GET(){
 
         return NextResponse.json(books,{status:200});
     }catch(error){
-        return NextResponse.json({error:"Failed to fetch most borrowed books"},{status:500});
+        return NextResponse.json({error:error},{status:500});
     }
 }

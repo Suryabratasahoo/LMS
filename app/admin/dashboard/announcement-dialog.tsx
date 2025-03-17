@@ -35,6 +35,7 @@ export function AnnouncementDialog({
         }
         toast.success("Notice posted successfully");
     }catch(error){
+        console.error(error);
         toast.error("Failed to post notice");
     }
     // resetting the fields

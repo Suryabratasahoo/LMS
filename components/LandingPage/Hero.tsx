@@ -1,7 +1,7 @@
 'use client'
 
 import { Button } from '../ui/button'
-import { ArrowRight, Router } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { Playfair_Display, Lato } from 'next/font/google';
 import { useRouter } from 'next/navigation';

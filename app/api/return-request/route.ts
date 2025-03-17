@@ -41,6 +41,7 @@ export async function PATCH(req:NextRequest):Promise<NextResponse>{
         await Book.findByIdAndUpdate(bookId,{$inc:{availableCopies:1}});
         return NextResponse.json({message:"Request has been approved"},{status:200});
     }catch(error){
+        console.log(error);
         return NextResponse.json({error:"Internal Server Error"},{status:500});
     }
 }

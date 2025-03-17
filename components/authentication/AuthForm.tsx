@@ -77,7 +77,7 @@ export function AuthForm({ type }: AuthFormProps) {
   
       // Store the token in cookies instead of localStorage
       const responseWithToken = storeTokenInCookies(token);
-  
+      console.log(responseWithToken);
       // You can redirect or update the UI after storing the token
       toast.success('Signup successful!');
       console.log('Signup successful:', data);

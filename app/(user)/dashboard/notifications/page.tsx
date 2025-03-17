@@ -1,7 +1,7 @@
 "use client"
 
 import { useState,useEffect } from "react"
-import { Bell, Book, Calendar, Info, X,XCircle,CheckCircle,AlarmClock } from "lucide-react"
+import { Bell, Info, X,XCircle,CheckCircle,AlarmClock } from "lucide-react"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
@@ -21,14 +21,14 @@ interface Notification {
 export default function NotificationsPage() {
     
     const [notifications, setNotifications] = useState<Notification[]>([]);
-    const [userId,setUserId]=useState("");
+    // const [userId,setUserId]=useState("");
 
    
 
 
     useEffect(() => {
         const userDetails = JSON.parse(localStorage.getItem("userDetails") || "{}");
-        setUserId(userDetails._id);
+        // setUserId(userDetails._id);
         const fetchNotifications=async()=>{
             try{
                 const response=await fetch(`/api/notifications?userId=${userDetails._id}`);

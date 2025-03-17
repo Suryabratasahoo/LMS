@@ -13,15 +13,10 @@ export async function GET(req: NextRequest): Promise<NextResponse> {
     }
     try {
         await connectDB();
-        const user=await User.findById(userId);
-
-
-
         const borrowedBooks = await BorrowedBooks.find({ user: userId,status:"Borrowed" }).populate('book', 'title author image');
-
         return NextResponse.json(borrowedBooks, { status: 200 });
     }catch(error){
-        return NextResponse.json({error:"Internal Server Error"},{status:500});
+        return NextResponse.json({error:error},{status:500});
     }
     
 }

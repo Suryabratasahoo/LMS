@@ -39,6 +39,7 @@ export default function ResetPasswordConfirmationPage() {
       await new Promise((resolve) => setTimeout(resolve, 1500)); // Simulating network delay
       toast.success('Password reset link sent to your email.');
     } catch (err) {
+      console.log(err);
       toast.error('An error occurred. Please try again.');
     } finally {
       setIsSubmitting(false);

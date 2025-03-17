@@ -29,6 +29,7 @@ export async function PUT(req:NextRequest):Promise<NextResponse> {
         await book.save();
         return NextResponse.json({message:"Book updated successfully"},{status:200});
     }catch(error){
+        console.log(error);
         return NextResponse.json({message:"internal server error"},{status:500});
     }
 }
@@ -47,6 +48,7 @@ export async function DELETE(req:NextRequest):Promise<NextResponse> {
         await Book.findByIdAndDelete(bookID);
         return NextResponse.json({message:"Book deleted successfully"},{status:200});
     }catch(error){
+        console.log(error);
         return NextResponse.json({message:"Internal server error"},{status:500});
     }
 }

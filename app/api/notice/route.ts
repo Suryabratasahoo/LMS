@@ -22,6 +22,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({message:"Notice created successfully"},{status:200});
         
     }catch(error){
+        console.log(error);
         return NextResponse.json({error:"Internal Server Error"},{status:500});
     }
 }
@@ -34,6 +35,7 @@ export async function GET() {
         console.log(notices);
         return NextResponse.json(notices,{status:200});
     }catch(error){
+        console.log(error);
         return NextResponse.json({error:"problem in fetching notices"},{status:500});
     }
 }
