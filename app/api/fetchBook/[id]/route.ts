@@ -2,10 +2,16 @@ import { NextResponse, NextRequest } from "next/server";
 import connectDB from "@/lib/connectDb";
 import Book from "@/models/Book";
 
-export async function GET(req: NextRequest, context: { params: { id: string } }) {
+interface NextRequestContext {
+  params: {
+    id: string;
+  };
+}
+
+export async function GET(req: NextRequest, context: NextRequestContext) {
   try {
     await connectDB();
-    const { id } =context.params; // Await the params
+    const { id } = context.params;
 
     const book = await Book.findById(id);
 
