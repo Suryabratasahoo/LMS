@@ -5,7 +5,7 @@ import Book from "@/models/Book";
 export async function GET(req: NextRequest, context: { params: { id: string } }) {
   try {
     await connectDB();
-    const { id } = await context.params; // Await the params
+    const { id } =context.params; // Await the params
 
     const book = await Book.findById(id);
 
